@@ -109,31 +109,33 @@
     </div>
   </section>
 
+  
   <!-- Projects -->
   <section id="projects" class="scroll-mt-24 py-16">
     <div class="mx-auto max-w-6xl px-6">
       <h2 class="text-3xl font-bold tracking-tight">Security Projects</h2>
-      <p class="mt-2 opacity-80">Hands-on labs and coursework</p>
+      <p class="mt-2 opacity-80">Click any project to view screenshots and a concise, employer-focused summary.</p>
       <div class="mt-8 grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft">
+        <button class="text-left rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft hover:shadow" data-project="geth" aria-haspopup="dialog">
           <h3 class="text-base font-semibold">Private Ethereum Blockchain (Geth on Linux)</h3>
-          <p class="mt-2 text-sm opacity-80">Designed and deployed a private chain: custom genesis, managed EOAs, configured etherbase, processed transactions, and mined blocks to demonstrate PoW, account management, and secure transaction processing.</p>
-        </div>
-        <div class="rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft">
+          <p class="mt-2 text-sm opacity-80">Custom genesis, EOAs, mining, transaction flow; RPC automation and failure-mode docs.</p>
+        </button>
+        <button class="text-left rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft hover:shadow" data-project="iot" aria-haspopup="dialog">
           <h3 class="text-base font-semibold">Cyberscope – IoT Tamper/Integrity Detection</h3>
-          <p class="mt-2 text-sm opacity-80">Raspberry Pi prototype to detect tampering; Python scripts using GPIO, hashlib, and requests to send real-time alerts via ThingSpeak.</p>
-        </div>
-        <div class="rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft">
+          <p class="mt-2 text-sm opacity-80">GPIO tamper signals + file hashing; resilient telemetry and incident-friendly logs.</p>
+        </button>
+        <button class="text-left rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft hover:shadow" data-project="nids" aria-haspopup="dialog">
           <h3 class="text-base font-semibold">Network Intrusion Detection (Data Engineering)</h3>
-          <p class="mt-2 text-sm opacity-80">Processed large packet datasets; engineered flow features (packet counts, avg lengths, SYN flags) to support ML-based intrusion detection.</p>
-        </div>
-        <div class="rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft">
-          <h3 class="text-base font-semibold">OWASP A09 Logging & Monitoring</h3>
-          <p class="mt-2 text-sm opacity-80">WebGoat scenarios covering log injection/spoofing and credential leakage; implemented secure logging practices and monitoring strategies.</p>
-        </div>
+          <p class="mt-2 text-sm opacity-80">Flow features, schema checks, and parquet outputs primed for modeling & triage.</p>
+        </button>
+        <button class="text-left rounded-2xl border bg-white/60 backdrop-blur p-6 shadow-soft hover:shadow" data-project="owasp" aria-haspopup="dialog">
+          <h3 class="text-base font-semibold">OWASP A09 – Logging & Monitoring</h3>
+          <p class="mt-2 text-sm opacity-80">Structured logs, injection defenses, rotation/retention and alerting foundations.</p>
+        </button>
       </div>
     </div>
   </section>
+
 
   <!-- Skills -->
   <section id="skills" class="scroll-mt-24 py-16">
@@ -214,5 +216,36 @@
     </div>
   </footer>
   <script src="./script.js"></script>
+
+  <!-- Modal -->
+  <div id="project-backdrop" class="modal-backdrop" aria-hidden="true"></div>
+  <div id="project-modal" class="modal-panel hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title" class="text-lg font-semibold">Project</h3>
+        <button id="modal-close" class="modal-close" aria-label="Close (Esc)">✕</button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <img id="modal-image" src="" alt="" class="modal-img">
+          <div id="modal-thumbs" class="modal-thumbs"></div>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold">What I did</h4>
+          <ul id="modal-did" class="mt-2 list-disc pl-5 text-sm leading-relaxed space-y-1"></ul>
+
+          <h4 class="mt-4 text-sm font-semibold">Stack</h4>
+          <p id="modal-stack" class="mt-2 text-sm opacity-80"></p>
+
+          <h4 class="mt-4 text-sm font-semibold">Highlights</h4>
+          <ul id="modal-highlights" class="mt-2 list-disc pl-5 text-sm leading-relaxed space-y-1"></ul>
+
+          <h4 class="mt-4 text-sm font-semibold">What this shows employers</h4>
+          <p id="modal-value" class="mt-2 text-sm opacity-80"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+
