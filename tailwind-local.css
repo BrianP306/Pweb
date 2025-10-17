@@ -1,0 +1,127 @@
+
+/* tailwind-local.css – subset of utilities used in this site (no CDN required) */
+
+/* Base reset */
+*,*::before,*::after{box-sizing:border-box}
+html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,
+  Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";}
+img,svg{display:block;max-width:100%;height:auto}
+
+/* Colors */
+.bg-slate-50{background-color:#f8fafc}
+.text-slate-900{color:#0f172a}
+.text-slate-600{color:#475569}
+.bg-white\/80{background-color:rgba(255,255,255,.8)}
+.bg-white\/60{background-color:rgba(255,255,255,.6)}
+.bg-white\/70{background-color:rgba(255,255,255,.7)}
+.bg-white{background:#fff}
+
+/* Borders */
+.border{border:1px solid #e5e7eb}
+.border-b{border-bottom:1px solid #e5e7eb}
+
+/* Radius */
+.rounded-xl{border-radius:0.75rem}
+.rounded-2xl{border-radius:1rem}
+.rounded-full{border-radius:9999px}
+
+/* Shadows */
+.shadow{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.shadow-sm{box-shadow:0 1px 2px 0 rgba(0,0,0,.05)}
+.shadow-soft{box-shadow:0 8px 30px rgba(0,0,0,.06)}
+
+/* Backdrop */
+.backdrop-blur{backdrop-filter:blur(8px)}
+
+/* Positioning + z-index + sticky */
+.relative{position:relative}
+.absolute{position:absolute}
+.sticky{position:sticky}
+.top-0{top:0}
+.inset-0{top:0;right:0;bottom:0;left:0}
+.z-40{z-index:40}
+.z-50{z-index:50}
+
+/* Spacing */
+.p-4{padding:1rem}
+.p-5{padding:1.25rem}
+.p-6{padding:1.5rem}
+.px-3{padding-left:.75rem;padding-right:.75rem}
+.px-5{padding-left:1.25rem;padding-right:1.25rem}
+.px-6{padding-left:1.5rem;padding-right:1.5rem}
+.py-2{padding-top:.5rem;padding-bottom:.5rem}
+.py-3{padding-top:.75rem;padding-bottom:.75rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-10{padding-top:2.5rem;padding-bottom:2.5rem}
+.py-16{padding-top:4rem;padding-bottom:4rem}
+.py-20{padding-top:5rem;padding-bottom:5rem}
+.md\:py-24{padding-top:6rem;padding-bottom:6rem}
+.mt-2{margin-top:.5rem}
+.mt-3{margin-top:.75rem}
+.mt-4{margin-top:1rem}
+.mt-6{margin-top:1.5rem}
+.mt-8{margin-top:2rem}
+.mb-4{margin-bottom:1rem}
+.gap-2{gap:.5rem}
+.gap-3{gap:.75rem}
+.gap-6{gap:1.5rem}
+.gap-10{gap:2.5rem}
+
+/* Typography */
+.text-xs{font-size:.75rem;line-height:1rem}
+.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.text-2xl{font-size:1.5rem;line-height:2rem}
+.text-3xl{font-size:1.875rem;line-height:2.25rem}
+.text-4xl{font-size:2.25rem;line-height:2.5rem}
+.md\:text-5xl{font-size:3rem;line-height:1}
+.font-semibold{font-weight:600}
+.font-extrabold{font-weight:800}
+.font-black{font-weight:900}
+.leading-tight{line-height:1.25}
+.leading-relaxed{line-height:1.625}
+.tracking-tight{letter-spacing:-.01em}
+.opacity-70{opacity:.7}
+.opacity-75{opacity:.75}
+.opacity-80{opacity:.8}
+
+/* Layout */
+.flex{display:flex}
+.inline-flex{display:inline-flex}
+.items-center{align-items:center}
+.justify-between{justify-content:space-between}
+.grid{display:grid}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.md\:grid-cols-2{}
+.space-y-1 > :not([hidden]) ~ :not([hidden]){margin-top:0.25rem}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){margin-top:0.5rem}
+.space-y-8 > :not([hidden]) ~ :not([hidden]){margin-top:2rem}
+
+/* Width / max-width */
+.w-28{width:7rem}
+.h-28{height:7rem}
+.max-w-6xl{max-width:72rem}
+.min-h-screen{min-height:100vh}
+.mx-auto{margin-left:auto;margin-right:auto}
+
+/* Lists / padding */
+.list-disc{list-style-type:disc}
+.pl-5{padding-left:1.25rem}
+
+/* Utilities */
+.hover\:opacity-90:hover{opacity:.9}
+.hover\:opacity-80:hover{opacity:.8}
+.hover\:underline:hover{text-decoration:underline}
+.hover\:shadow:hover{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1)}
+.block{display:block}
+.hidden{display:none}
+.scroll-mt-24{scroll-margin-top:6rem}
+
+/* Responsive (md = 768px) */
+@media (min-width:768px){
+  .md\:flex{display:flex}
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md\:hidden{display:none}
+}
